@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.cal.DayOfCalendarOfTeacher&apos; to &apos;DayOfCalendar2&apos;&#x0D;&#x0A;- Original project: &apos;Java09_Practice01&apos;&#x0D;&#x0A;- Original element: &apos;com.cal.DayOfCalendarOfTeacher&apos;&#x0D;&#x0A;- Renamed element: &apos;com.cal.DayOfCalendar2&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DayOfCalendarOfTeacher&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.cal{DayOfCalendarOfTeacher.java[DayOfCalendarOfTeacher" matchStrategy="1" name="DayOfCalendar2" qualified="false" references="true" similarDeclarations="false" stamp="1606867323689" textual="false" version="1.0"/>
+</session>

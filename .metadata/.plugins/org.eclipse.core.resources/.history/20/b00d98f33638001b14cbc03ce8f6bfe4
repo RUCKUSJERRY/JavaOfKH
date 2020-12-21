@@ -1,0 +1,47 @@
+package com.cal01;
+
+// 달력만들기
+// 요일계산 -> year년 month월을 주면, year년 month월 1일의 요일 -> 요일만큼 공백 -> 7개씩 새로운 줄
+
+public class DayOfCalendar {
+		
+		
+	public static void prn(int year, int month) {
+
+		// 달력 윗부분 출력
+		if (month > 12) {
+			System.out.println("연/월을 잘못 입력하셨습니다.");
+		} else {
+			System.out.printf("\t\t%d년 %d월\n", year, month);
+			System.out.println("일\t월\t화\t수\t목\t금\t토\n");
+		}
+		
+		// 시작 요일
+		// 365*year중에 평년 + 366*year중에 윤년 + 해당 year의 month * 일수
+		
+		int totalDay = 0;
+		for (int i = 0; i < year; i++) {
+			if (isLeafDay(i,month) == true) {
+		}
+		
+		// 마지막 날짜
+		
+		
+		// 시작 요일 만큼 빈공간
+		
+		// 달력 출력
+
+	}
+	public static void startOfDay(int year, int month) {
+		
+	}
+	
+	public static boolean isLeafDay(int year) {
+		
+		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+			return true;
+		} else {
+			return false;
+		}	
+	}
+}

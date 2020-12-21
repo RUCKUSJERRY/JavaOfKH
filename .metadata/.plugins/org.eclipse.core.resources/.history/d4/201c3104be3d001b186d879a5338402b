@@ -1,0 +1,8 @@
+package com.jar;
+
+public class MTest {
+
+	public static void main(String[] args) {
+		
+	}
+}

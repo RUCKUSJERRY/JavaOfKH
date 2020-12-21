@@ -1,0 +1,33 @@
+package com.test01;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class MTest04 {
+
+	public static void main(String[] args) {
+		File fi = new File("b.txt");
+
+		MyOutput(fi);
+		MyInput(fi);
+
+	}
+	
+	// read
+	private static void MyInput(File fi) {
+
+	}
+
+	// write
+	private static void MyOutput(File fi) throws IOException {
+		FileWriter fw = new FileWriter(fi, false);
+		
+		fw.write("연습중입니다.\n");
+		fw.append("abc\t").append("def");
+		
+		fw.close();
+		
+	}
+
+}

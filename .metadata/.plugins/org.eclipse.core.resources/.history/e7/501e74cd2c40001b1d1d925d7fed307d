@@ -1,0 +1,38 @@
+package com.kh.test.duck.model.vo;
+
+public class RubberDuck extends Duck {
+
+	public String PLACE = "석촌호수";
+	private int weight;
+	
+	public RubberDuck() {
+		
+	}
+
+	public RubberDuck(String name, String kinds, int weight) {
+		
+	}
+	
+	public String getPLACE() {
+		return PLACE;
+	}
+
+	public void setPLACE(String pLACE) {
+		PLACE = pLACE;
+	}
+
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	@Override
+	public void quack() {
+		
+
+	}
+
+}

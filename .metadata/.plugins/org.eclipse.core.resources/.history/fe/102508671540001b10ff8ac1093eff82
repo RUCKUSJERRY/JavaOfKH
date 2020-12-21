@@ -1,0 +1,22 @@
+package com.kh.test.duck.model.vo;
+
+public class Mallard extends Duck {
+
+	private String location;
+	private String color;
+	
+	public Mallard() {
+		
+	}
+	
+	public Mallard(String name, String kinds, String location, String color) {
+		
+	}
+	
+	@Override
+	public void quack() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.test01;
+
+import java.net.DatagramSocket;
+
+public class TestServer {
+
+	public static void main(String[] args) {
+		
+		DatagramSocket ds = new DatagramSocket(8888);
+		System.out.println("서버입니다.");
+		
+	}
+}

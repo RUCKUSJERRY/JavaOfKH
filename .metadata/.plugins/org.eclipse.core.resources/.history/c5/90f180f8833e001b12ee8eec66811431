@@ -1,0 +1,9 @@
+package com.test01;
+
+public class RuntimeTest {
+
+	public static void main(String[] args) {
+		
+	}
+	
+}

@@ -1,0 +1,15 @@
+package com.test01;
+
+import java.util.Scanner;
+
+public class Test01 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		String name = sc.nextLine();
+		String id = sc.nextLine();
+		System.out.println(name + "님의 아이디는 " + id + "입니다");
+		
+	}
+}

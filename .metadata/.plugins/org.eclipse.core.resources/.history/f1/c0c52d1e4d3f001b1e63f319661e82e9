@@ -1,0 +1,17 @@
+package com.test02;
+
+public class MyClient implements Runnable{
+
+	@Override
+	public void run() {
+		
+	}
+	
+	public static void main(String[] args) {
+		Thread client = new Thread(new MyClient());
+		client.start();
+		
+		
+	}
+	
+}

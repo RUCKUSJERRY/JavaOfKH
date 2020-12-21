@@ -1,0 +1,14 @@
+package com.test01;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class MTest02 {
+
+	public static void main(String[] args) throws MalformedURLException {
+		
+		URL url = new URL("https://www.iei.or.kr/resources/images/main/20201210_popup_new.jpg");
+		
+		
+	}
+}

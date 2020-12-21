@@ -1,0 +1,82 @@
+package com.cal01;
+
+// 달력만들기
+// 요일계산 -> year년 month월을 주면, year년 month월 1일의 요일 -> 요일만큼 공백 -> 7개씩 새로운 줄
+
+public class DayOfCalendar {
+		
+		
+	public static void prn(int year, int month) {
+
+		// 달력 윗부분 출력
+		if (month > 12) {
+			System.out.println("연/월을 잘못 입력하셨습니다.");
+		} else {
+			System.out.printf("\t\t%d년 %d월\n", year, month);
+			System.out.println("일\t월\t화\t수\t목\t금\t토\n");
+		}
+		System.out.println(startOfDay(year,month));
+		prnCal(year, month);
+		
+		// 시작 요일 만큼 빈공간
+		
+		// 달력 출력
+
+	}
+	
+	public static void prnCal(int year, int month) {
+		
+		for (int i = 0; i < startOfDay(year, month); i++) {
+			System.out.printf("ㅁ");
+		}
+		
+	}
+	
+	public static int startOfDay(int year, int month) {
+		// 시작 요일
+		// 365*year중에 평년 + 366*year중에 윤년 + 해당 year의 month * 일수
+		
+		int totalDay = 0;
+		int totalLastDayOfMonth = 0;
+		int startDay = 0;
+		for (int i = 0; i < year; i++) {
+			totalDay += 365;
+			if (isLeapDay(i) == true) {
+				totalDay += 1;
+			}
+		}
+		for (int i = 1; i <= month; i++) {
+			totalLastDayOfMonth += lastDayOfMonth(year, i);
+			System.out.println(i + "월 일수 : " + totalLastDayOfMonth);
+		}
+		System.out.println(totalDay);
+		System.out.println(totalLastDayOfMonth);
+		startDay = (totalDay + totalLastDayOfMonth) % 7;
+		return startDay;
+		
+		
+	}
+	
+	public static int lastDayOfMonth(int year, int month) {
+		// 마지막 날짜
+		if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+			return 31;
+		} else if (month == 4 || month == 6 || month == 3 || month == 9 || month == 11) {
+			return 30;
+		} else if (month == 2 && isLeapDay(year) == true) {
+			return 29;		
+		} else {
+			return 28;
+		}
+		
+	}
+	
+	public static boolean isLeapDay(int year) {
+		
+		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+			return true;
+		} else {
+			return false;
+		}	
+	}
+}

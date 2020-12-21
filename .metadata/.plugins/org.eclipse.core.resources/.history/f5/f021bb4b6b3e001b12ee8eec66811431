@@ -1,0 +1,21 @@
+package com.test01;
+
+import java.io.File;
+
+public class MTest01 {
+
+	public static void main(String[] args) {
+		
+		// mac -> /Users/계정/test_io
+		File fi = new File("C:/test_io");
+		
+		if (fi.exists()) {
+			System.out.println("exists");
+		} else {
+			System.out.println("make directory");
+			fi.mkdirs();
+		}
+		
+		
+	}
+}

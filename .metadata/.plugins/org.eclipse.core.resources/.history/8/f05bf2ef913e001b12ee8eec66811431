@@ -1,0 +1,16 @@
+package com.test01;
+
+class MyThread03 extends Thread {
+	
+	public MyThread03(String name) {
+		super(name);
+	}
+	
+}
+
+public class Thread03 {
+
+	public static void main(String[] args) {
+		
+	}
+}

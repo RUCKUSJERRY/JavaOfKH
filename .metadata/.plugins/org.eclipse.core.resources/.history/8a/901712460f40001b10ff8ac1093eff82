@@ -1,0 +1,18 @@
+package com.kh.test.duck.model.vo;
+
+public abstract class Duck {
+
+	private String name;
+	private String kinds;
+	
+	public Duck() {
+
+	}
+
+	public Duck(String name, String kinds) {
+
+	}
+
+	
+	
+}

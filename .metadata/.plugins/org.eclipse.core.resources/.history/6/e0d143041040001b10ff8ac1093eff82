@@ -1,0 +1,11 @@
+package com.kh.test.duck.model.vo;
+
+public class RubberDuck extends Duck {
+
+	@Override
+	public void quack() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
