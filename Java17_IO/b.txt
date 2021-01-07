@@ -15,3 +15,9 @@ abc	def
 다시 연습입니다.abc
 연습중입니다.
 abc	def
+연습중입니다.
+abc	def
+연습중입니다.
+abc	def
+연습중입니다.
+abc	def

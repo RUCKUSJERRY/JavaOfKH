@@ -1,7 +1,0 @@
-package com.kh.test.duck.model.vo;
-
-public abstract class Duck {
-
-	
-	
-}

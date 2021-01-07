@@ -5,7 +5,7 @@ public class Hello {
 	public static void main(String[] args) {
 	
 		System.out.println("Hello, World!");
-
+/*
 		int a=1;
 
 		  a++;
@@ -39,6 +39,6 @@ public class Hello {
 		  int a4=--a;
 
 		  System.out.println(a4); // a4 = 1;
-		
+*/		
 	}
 }
