@@ -40,29 +40,78 @@ public class MyController {
 				break;
 
 			case 2:
-
-				List<MyTestDto> list2 = biz.selectOne();
-
-				for (MyTestDto dto : list2) {
-					System.out.printf("%3d %10s %10s\n", dto.getMno(), dto.getMname(), dto.getNickname());
-				}
-
+				System.out.println("번호 입력 : ");
+				int selectNo = sc.nextInt();
+				
+				biz.selectOne(selectNo);
+				
 				break;
 			// 선책출력
 			case 3:
-				System.out.println(biz.insert());
+				System.out.println("번호 입력 : ");
+				int insertNo = sc.nextInt();
+				System.out.println("이름 입력 : ");
+				String insertName = sc.next();
+				System.out.println("별명 입력 : ");
+				String insertNickname = sc.next();
+				
+				MyTestDto insertDto = new MyTestDto();
+				insertDto.setMno(insertNo);
+				insertDto.setMname(insertName);
+				insertDto.setNickname(insertNickname);
+				
+				int insertRes = biz.insert(insertDto);
+				
+				if(insertRes > 0) {
+					System.out.println("추가 성공");
+					
+				} else {
+					System.out.println("추가 실패");
+				}
+				
+				//System.out.println(biz.insert());
 
 				break;
 			// 추가
 			case 4:
+				System.out.println("수정할 번호 입력 : ");
+				int updateNo = sc.nextInt();
+				System.out.println("수정할 컬럼 입력 : (이름 or 별명) ");
+				String updateCulumn = sc.next();
+				System.out.println("수정할 이름 or 별명 입력 : ");
+				String updateChange = sc.next();
 				
-				System.out.println(biz.update());
+				MyTestDto updateDto = new MyTestDto();
+				
+				updateDto.setMno(updateNo);
+				updateDto.setMname(updateCulumn);
+				updateDto.setNickname(updateChange);
+				
+				int updateRes = biz.update(updateDto);
+				
+				if(updateRes > 0) {
+					System.out.println("수정 성공");
+				} else {
+					System.out.println("수정 실패");
+				}
+				
+				//System.out.println(biz.update());
 
 				break;
 			// 수정
 			case 5:
+				System.out.println("삭제할 번호 입력 : ");
+				int deleteNo = sc.nextInt();
 				
-				System.out.println(biz.delete());
+				int deleteRes = biz.delete(deleteNo);
+				
+				if(deleteRes > 0) {
+					System.out.println("삭제 성공");
+				} else {
+					System.out.println("삭제 실패");
+				}
+				
+				//System.out.println(biz.delete());
 
 				break;
 			// 삭제

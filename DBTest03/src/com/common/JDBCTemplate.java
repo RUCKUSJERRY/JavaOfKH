@@ -32,6 +32,7 @@ public class JDBCTemplate {
 		
 		try {
 			con = DriverManager.getConnection(url, user, password);
+			con.setAutoCommit(false);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -66,4 +67,21 @@ public class JDBCTemplate {
 		
 	}
 	
+	public static void commit(Connection con) {
+		try {
+			con.commit();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+	}
+	
+	public static void rollback(Connection con) {
+		try {
+			con.rollback();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+	}
 }
