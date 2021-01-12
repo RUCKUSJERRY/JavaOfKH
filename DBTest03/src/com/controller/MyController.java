@@ -40,11 +40,11 @@ public class MyController {
 				break;
 
 			case 2:
-				System.out.println("번호 입력 : ");
+				System.out.println("선택할 번호 입력 : ");
 				int selectNo = sc.nextInt();
 				
-				biz.selectOne(selectNo);
-				
+				MyTestDto selectOne = biz.selectOne(selectNo);
+				System.out.printf("%3d %10s %10s \n", selectOne.getMno(), selectOne.getMname(), selectOne.getNickname() );
 				break;
 			// 선책출력
 			case 3:

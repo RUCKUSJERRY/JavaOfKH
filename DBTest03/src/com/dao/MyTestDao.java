@@ -61,18 +61,23 @@ public class MyTestDao {
 	public MyTestDto selectOne(int mno) {
 
 		Connection con = getConnection();
-		String sql = " SELECT * FROM MYTEST " + " WHERE mno = " + mno;
+		String sql = " SELECT * FROM MYTEST " + " WHERE MNO = " + mno;
 
 		Statement stmt = null;
 		ResultSet rs = null;
-		MyTestDto dto = new MyTestDto();
+		MyTestDto dto = null;
 		try {
+			// 3.
 			stmt = con.createStatement();
 
+			// 4.
 			rs = stmt.executeQuery(sql);
 
 			while (rs.next()) {
-				System.out.printf("%2d %10s %10s \n", rs.getInt(1), rs.getString(2), rs.getString(3));
+				dto = new MyTestDto();
+				dto.setMno(rs.getInt(1));
+				dto.setMname(rs.getString(2));
+				dto.setNickname(rs.getString(3));
 			}
 		} catch (SQLException e) {
 
@@ -156,7 +161,7 @@ public class MyTestDao {
 		} else {
 			sql = " UPDATE MYTEST " + " SET NICKNAME = ? " + " WHERE MNO = ? ";
 		}
-		
+
 		try {
 			pstm = con.prepareStatement(sql);
 			pstm.setString(1, dto.getNickname());
@@ -179,29 +184,29 @@ public class MyTestDao {
 	}
 
 	public int delete(int mno) {
-		
+
 		Connection con = getConnection();
 		String sql = " DELETE FROM MYTEST " + " WHERE MNO = ? ";
-		
+
 		PreparedStatement pstm = null;
 		int res = 0;
 		try {
 			pstm = con.prepareStatement(sql);
 			pstm.setInt(1, mno);
 			res = pstm.executeUpdate();
-			
+
 			if (res > 0) {
 				commit(con);
 			}
-			
+
 		} catch (SQLException e) {
-			
+
 			e.printStackTrace();
 		} finally {
 			close(pstm);
 			close(con);
 		}
-		
+
 		return res;
 	}
 
