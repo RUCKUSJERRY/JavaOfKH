@@ -14,8 +14,15 @@ public class MemberController {
 	public static int getMenu() {
 		int select = 0;
 		StringBuffer sb = new StringBuffer();
-		sb.append("**********\n").append("*1.전체출력*\n").append("*2.선택출력*\n").append("*3.추   가*\n").append("*4.수   정*\n")
-				.append("*5.삭   제*\n").append("*6.종   료*\n").append("**********\n").append("input select : ");
+		sb.append("**********\n")
+		  .append("*1.전체출력*\n")
+		  .append("*2.선택출력*\n")
+		  .append("*3.추   가*\n")
+		  .append("*4.수   정*\n")	
+		  .append("*5.삭   제*\n")
+		  .append("*6.종   료*\n")
+		  .append("**********\n")
+		  .append("input select : ");
 		System.out.println(sb);
 		select = sc.nextInt();
 
@@ -32,7 +39,7 @@ public class MemberController {
 			switch (select) {
 			case 1:
 				List<MemberDto> list = biz.selectList();
-
+				
 				for (MemberDto dto : list) {
 					System.out.println(dto);
 					// System.out.printf("%2d | %10s | %3d | %2s | %10s | %10s | %20s | %20s\n",
@@ -53,8 +60,8 @@ public class MemberController {
 				// dto.getM_location(), dto.getM_job(), dto.getM_tel(), dto.getM_email());
 				break;
 			case 3:
-				System.out.println("번호 입력 : ");
-				int insertNo = sc.nextInt();
+				//System.out.println("번호 입력 : ");
+				//int insertNo = sc.nextInt();
 				System.out.println("이름 입력 : ");
 				String insertName = sc.next();
 				System.out.println("나이 입력 : ");
@@ -72,7 +79,7 @@ public class MemberController {
 
 				MemberDto insertDto = new MemberDto();
 
-				insertDto.setM_no(insertNo);
+				//insertDto.setM_no(insertNo);
 				insertDto.setM_name(insertName);
 				insertDto.setM_age(insertAge);
 				insertDto.setM_gender(insertGender);
@@ -123,6 +130,8 @@ public class MemberController {
 				
 				break;
 			case 6:
+				
+				System.out.println("종료되었습니다.");
 				break;
 			}
 

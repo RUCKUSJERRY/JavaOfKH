@@ -12,7 +12,7 @@ public interface MemberDao {
 	                      + " FROM TB_MEMBER "
 			              + " WHERE M_NO = ";
 	
-	String INSERT_SQL = " INSERT INTO TB_MEMBER VALUES ( ? , ? , ? , ? , ? , ? , ? ,? ) ";
+	String INSERT_SQL = " INSERT INTO TB_MEMBER VALUES ( MEMBERSEQ.NEXTVAL , ? , ? , ? , ? , ? , ? , ? ) ";
 	String UPDATE_SQL = " UPDATE TB_MEMBER SET ";
 	String DELETE_SQL = " DELETE FROM TB_MEMBER " + " WHERE M_NO = ? ";
 	

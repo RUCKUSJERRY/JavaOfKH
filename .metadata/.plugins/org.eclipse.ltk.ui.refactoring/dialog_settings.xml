@@ -11,4 +11,8 @@
 	<section name="UseSupertypeWizard">
 		<item key="rewriteInstanceOf" value="false"/>
 	</section>
+	<section name="RefactoringWizard.Extract Superclass">
+		<item key="width" value="600"/>
+		<item key="height" value="416"/>
+	</section>
 </section>

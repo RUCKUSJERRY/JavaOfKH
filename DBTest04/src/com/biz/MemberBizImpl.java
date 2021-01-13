@@ -22,6 +22,8 @@ public class MemberBizImpl implements MemberBiz {
 
 	@Override
 	public int insert(MemberDto dto) {
+		// M_GENDER에 들어있는 값을 대문자로 바꾸자.
+		dto.setM_gender((dto.getM_gender().toUpperCase()));
 		return dao.insert(dto);
 	}
 

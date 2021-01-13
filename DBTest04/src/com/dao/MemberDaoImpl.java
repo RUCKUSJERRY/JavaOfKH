@@ -152,14 +152,14 @@ public class MemberDaoImpl implements MemberDao {
 
 		try {
 			stmt = con.prepareStatement(INSERT_SQL);
-			stmt.setInt(1, dto.getM_no());
-			stmt.setString(2, dto.getM_name());
-			stmt.setInt(3, dto.getM_age());
-			stmt.setString(4, dto.getM_gender());
-			stmt.setString(5, dto.getM_location());
-			stmt.setString(6, dto.getM_job());
-			stmt.setString(7, dto.getM_tel());
-			stmt.setString(8, dto.getM_email());
+			//stmt.setInt(1, dto.getM_no());
+			stmt.setString(1, dto.getM_name());
+			stmt.setInt(2, dto.getM_age());
+			stmt.setString(3, dto.getM_gender());
+			stmt.setString(4, dto.getM_location());
+			stmt.setString(5, dto.getM_job());
+			stmt.setString(6, dto.getM_tel());
+			stmt.setString(7, dto.getM_email());
 
 			res = stmt.executeUpdate();
 
