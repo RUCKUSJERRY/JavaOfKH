@@ -47,7 +47,7 @@ public class ScoredaoImpl implements Scoredao {
 			close(pstm);
 			close(con);
 		}
-
+		System.out.println(list.iterator());
 		return list;
 	}
 
